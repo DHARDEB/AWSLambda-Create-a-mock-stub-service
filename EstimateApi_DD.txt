@@ -1,0 +1,53 @@
+Nearest location lambda
+POST : https://api.doordash.com/drive/v1/estimates
+
+Request Body:
+
+   "body": {
+            "order_value": 0,
+            "pickup_time": "2021-04-22T17:55:07.319Z",
+            "external_store_id": "42770-0",
+            "pickup_address": {
+                "street": "3210 S Nellis Blvd",
+                "unit": "",
+                "city": "Las Vegas",
+                "state": "NV",
+                "zip_code": "89121"
+            },
+            "dropoff_address": {
+                "street": "5061 E Sahara Ave",
+                "unit": "undefined",
+                "city": "Las Vegas",
+                "state": "NV",
+                "zip_code": "89110"
+            }
+        }
+
+Response:
+
+{
+        "delivery_time": "2021-04-22T18:15:40.110468Z",
+        "pickup_window_start_time": null,
+        "fee": 549,
+        "dropoff_address": {
+            "city": "Las Vegas",
+            "dasher_parking_details": null,
+            "state": "NV",
+            "street": "5061 East Sahara Avenue",
+            "unit": "undefined",
+            "zip_code": "89142"
+        },
+        "pickup_time": "2021-04-22T17:55:47.319000Z",
+        "currency": "USD",
+        "pickup_window_end_time": null,
+        "id": 1
+    }
+
+
+
+
+Variables:
+
+1. pickup_time
+2. delivery_time - 30 min from Pickup time
+3. dropoff_address

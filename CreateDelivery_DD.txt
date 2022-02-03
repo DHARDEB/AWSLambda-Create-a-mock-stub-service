@@ -1,0 +1,133 @@
+ POST: https://api.doordash.com/drive/v1/deliveries
+
+Request Body: 
+
+ "body": {
+        "pickup_address": {
+            "city": "***********",
+            "state": "**",
+            "street": "681 Avenue of the Cities",
+            "zip_code": "61244",
+            "location": {}
+        },
+        "pickup_phone_number": "3097553663",
+        "dropoff_address": {
+            "city": "***********",
+            "state": "**",
+            "street": "308 W First Ave",
+            "unit": "undefined",
+            "zip_code": "61240"
+        },
+        "customer": {
+            "phone_number": "+1 8559731040",
+            "first_name": "test",
+            "last_name": "loadtest",
+            "email": "*******************************",
+            "should_send_notifications": false
+        },
+        "order_value": 1757.9999999999998,
+        "tip": 0,
+        "pickup_time": "2021-04-22T18:21:43.454Z",
+        "external_delivery_id": "f63032e4-726a-4a6e-8ad8-fbb67cc3fd41",
+        "external_store_id": "5455-0",
+        "external_business_name": "Subway"
+    }
+
+
+
+Response:
+
+{
+  "rating": null,
+  "pickup_window_start_time": null,
+  "actual_return_time": null,
+  "driver_reference_tag": null,
+  "contains_alcohol": false,
+  "updated_at": "2021-04-22T18:06:47.240555Z",
+  "currency": "USD",
+  "estimated_pickup_time": "2021-04-22T18:22:23.454000Z",
+  "delivery_verification_image_url": null,
+  "order_volume": null,
+  "id": 1190573433,
+  "dasher_status": "unassigned",
+  "estimated_delivery_time": "2021-04-22T18:52:17.118299Z",
+  "fee": 660,
+  "quoted_pickup_time": "2021-04-22T18:22:23.454000Z",
+  "dropoff_address": {
+    "city": "***********",
+    "dasher_parking_details": null,
+    "state": "**",
+    "street": "308 West 1st Avenue",
+    "unit": "undefined",
+    "zip_code": "61240"
+  },
+  "allow_unattended_delivery": false,
+  "tip": 0,
+  "team_lift_required": false,
+  "estimated_return_time": null,
+  "batch_id": null,
+  "external_store_id": "5455-0",
+  "is_return_delivery": false,
+  "pickup_instructions": "",
+  "dasher": null,
+  "status": "scheduled",
+  "quoted_delivery_time": "2021-04-22T18:52:17.118299Z",
+  "actual_pickup_time": null,
+  "delivery_window_start_time": null,
+  "signature_required": false,
+  "delivery_window_end_time": null,
+  "pickup_address": {
+    "city": "***********",
+    "dasher_parking_details": null,
+    "external_pickup_zone_id": null,
+    "state": "**",
+    "street": "681 Avenue Of The Cities",
+    "unit": "",
+    "zip_code": "61244"
+  },
+  "barcode_scanning_required": false,
+  "submit_platform": "drive_api",
+  "store_point": null,
+  "delivery_tracking_url": "https://doordash.com/drive/portal/track/f066c791-7aac-4cdf-a589-c89647f2e6b3",
+  "external_delivery_id": "f63032e4-726a-4a6e-8ad8-fbb67cc3fd41",
+  "customer": {
+    "phone_number": "+1 8559731040",
+    "first_name": "test",
+    "last_name": "loadtest",
+    "should_send_notifications": "False",
+    "business_name": "",
+    "email": "*******************************"
+  },
+  "return_delivery_id": null,
+  "parent_delivery_id": null,
+  "order_value": 1758,
+  "items": [],
+  "cash_on_delivery": null,
+  "route_id": null,
+  "dropoff_instructions": null,
+  "actual_delivery_time": null,
+  "signature_image_url": null,
+  "quantity": 1,
+  "pickup_window_end_time": null,
+  "level": "info",
+  "message": "DoorDash Response Payload",
+  "timestamp": "2021-04-22T18:06:47.353+00:00"
+}
+
+
+
+
+
+
+Variables:
+
+1. pickup_address
+2. dropoff_address
+3. customer
+4. order_value
+5. tip
+6. quoted_pickup_time and estimated_pickup_time - pickup time from request
+7. external_delivery_id
+8. external_store_id
+9. timestamp and updated_at - current time UTC 
+8. quoted_delivery_time and estimated_delivery_time - current time + 1hour. UTC format
